@@ -1,0 +1,36 @@
+.newsItem
+  display: block
+  position: relative
+  width: 100%
+  padding: 30px
+
+  &__date
+    color: $milk-grey
+    font-size: 12px
+    padding-bottom: 5px
+
+  &__title
+    color: $title-grey
+    font-size: 18px
+
+  &__text
+    color: $milk-grey
+    font-size: 14px
+    padding: 45px 0px
+
+  &__button
+    display: block
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 10px
+    background-color: $client
+    border: 0
+    padding: 10px 20px
+    color: $white
+    z-index: 0
+    cursor: pointer
+
+
+.-displayNone
+  display: none

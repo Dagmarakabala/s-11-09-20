@@ -1,0 +1,48 @@
+.news
+  display: block
+  width: 100%
+  padding: 60px 10%
+
+  +max($bp-xs)
+    padding: 30px 5px
+
+  &__title
+    padding: 25px 0px
+    text-align: center
+    font-size: 30px
+    color: $title-grey
+    border-bottom: 1px solid $background-item
+    cursor: pointer
+
+    &.-first
+      cursor: default
+      border: 0
+
+  &__container
+    display: block
+    width: 100%
+    margin: auto
+    border-top: 1px solid $background-item
+    border-bottom: 1px solid $background-item
+
+  &__month
+    width: 300px
+    background-color: $client
+    border: 0
+    text-align: center
+    padding: 10px 0px
+    line-height: 1
+    color: $white
+    cursor: pointer
+
+  &__monthTitle 
+    display: inline-block
+    font-size: 28px
+
+  &__itemLength
+    display: inline-block
+    font-size: 14px
+
+
+.-secondItem
+  background-color: $background-item

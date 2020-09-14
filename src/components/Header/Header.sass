@@ -1,0 +1,62 @@
+.header
+  display: block
+  position: fixed
+  width: 100%
+  padding: 39px 10% 0px 10%
+  background: rgba(100, 100, 100, 0.5)
+  z-index: 2
+
+  &__inner
+    display: flex
+    flex-wrap: nowrap
+    justify-content: space-between
+
+  &__img
+    object-fit: contain
+
+  &__toggle
+    cursor: pointer
+    position: absolute
+    height: 30px
+    right: 40px
+    top: 30px
+    width: 50px
+    z-index: 5
+    visibility: hidden
+
+    +max($bp-xlg)
+      visibility: visible
+
+  &__toggle &__toggleBar, &__toggle &__toggleBar::after, &__toggle &__toggleBar::before
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    transition: all 0.5s ease
+    background: $white
+    content: ''
+    height: 4px
+    width: 100%
+
+  &__toggle &__toggleBar 
+    margin-top: 0
+    
+  &__toggle &__toggleBar::after 
+    margin-top: 12px
+      
+  &__toggle &__toggleBar::before
+    margin-top: -12px
+      
+  &__toggle.expanded &__toggleBar 
+    background: transparent
+      
+  &__toggle.expanded &__toggleBar::after, &__toggle.expanded &__toggleBar::before 
+    background: $white
+    margin-top: 0
+
+  &__toggle.expanded &__toggleBar::after 
+    transform: rotate(45deg)
+    background-color: $white
+
+  &__toggle.expanded &__toggleBar::before 
+    transform: rotate(-45deg)
+    background-color: $white

@@ -1,0 +1,77 @@
+.menu
+  display: block
+  text-align: right
+
+  +max($bp-xlg)
+    transition: right 0.5s ease
+    background: $black
+    padding: 30px 5px 30px 30px
+    cursor: pointer
+    right: -100%
+    position: fixed
+    top: 0
+    max-width: 90%
+    z-index: 1
+    text-align: left
+
+  &.expanded
+    left: auto
+    right: 0
+
+  &__list
+    display: block
+
+    +max($bp-xlg)
+      padding-top: 50px    
+    
+  &__item
+    display: inline-block
+    position: relative
+    padding: 30px 10px 15px 10px
+    color: $white
+    font-size: 14px
+
+    +max($bp-xlg)
+      display: block
+      padding: 10px
+
+    &:hover
+      background-color: $web
+
+      +max($bp-xlg)
+        background-color: lighten($black, 15%)
+
+  &__link 
+    color: $white
+    text-decoration: none
+
+
+  &__dropDown
+    display: none
+    position: absolute
+    top: 61px
+    text-align: left
+    margin-left: -10px
+
+    +max($bp-xlg)
+      position: static
+      margin: 0px 0px -10px -10px
+
+  &__item:hover > &__dropDown
+    display: block
+
+.-second
+  background-color: $grey
+  padding: 10px 
+  min-width: 300px
+
+  +max($bp-xlg)
+    background-color: lighten($black, 15%)
+    padding-left: 20px
+
+  &:hover
+    background-color: $light-grey
+
+    +max($bp-xlg)
+      background-color: lighten($black, 20%)
+

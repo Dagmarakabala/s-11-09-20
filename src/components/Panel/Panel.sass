@@ -1,0 +1,44 @@
+.panel
+  dispaly: block
+  position: absolute
+  top: 0
+  right: 10%
+  z-index: 2
+
+  +max($bp-xs)
+    right: 50%
+    transform: translateX(50%)
+
+  &__container
+    display: flex
+    flex-wrap: nowrap
+    aling-items: center
+  
+  &__inner 
+    display: flex
+    flex-wrap: nowrap
+    aling-items: center
+    gap: 10px
+
+  &__web
+    +panel__item
+    background-color: $web 
+
+  &__client 
+    +panel__item
+    background-color: $client 
+
+  &__post 
+    +panel__item 
+    background-color: $post
+
+  &__icon
+    display: inline-block 
+    object-fit: contain
+
+  &__text
+    display: inline-block
+
+    +max($bp-xs)
+      display: none
+
