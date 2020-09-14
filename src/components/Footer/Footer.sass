@@ -1,0 +1,107 @@
+.footer
+  display: block
+  background-color: $client 
+  line-height: 1.4
+
+  &__container
+    display: flex
+    flex-wrap: wrap
+    width: 80%
+    margin: auto
+
+  &__item
+    width: 25%
+    border-left: 1px solid $background-item
+    padding: 15px
+
+    &.-padding
+      padding: 15px 25px
+      
+    &:hover 
+      background-color: lighten($client, 25%)
+
+    +max($bp-md)
+      width: 50%
+      border-bottom: 1px solid $background-item
+
+    +max($bp-xs)
+      width: 100%
+      border-left: 0
+      border-bottom: 1px solid $background-item
+
+  &__title 
+    font-size: 18px
+    color: $white
+    padding-bottom: 15px
+
+  &__link 
+    color: $grey-text
+    font-size: 12px 
+    text-decoration: none
+
+  &__item:hover > &__list > &__element > &__link
+    color: $white
+
+  &__item:hover > &__inner > &__text > &__link
+    color: $white
+
+  &__text 
+    font-size: 12px
+    color: $grey-text
+    
+    &.-font-size-10
+      font-size: 10px
+  &__item:hover > &__text
+    color: $white
+
+  &__item:hover > &__form > &__agree > &__text
+    color: $white
+  
+  &__item:hover > &__inner > &__text
+    color: $white
+  
+  &__input 
+    height: 36px
+    width: 100%
+    margin: 35px 0px 15px 0px
+    padding: 10px
+    border: 0
+
+  &__button 
+    width: 100%
+    background-color: $client
+    border: 0
+    tezt-align: center
+    padding: 10px 0px
+    margin-bottom: 10px
+    font-size: 14px
+    color: $button-text
+
+  &__checkbox 
+    display: inline-block
+
+  &__agree 
+    display: flex
+    flex-wrap: wrap
+    gap: 5px
+
+  &__item:hover > &__form > &__agree
+    color: $white
+
+  &__textLink 
+    display: inline-block
+    color: $grey-text
+    font-size: 10px
+
+  &__item:hover > &__form > &__agree > &__textLink
+    color: $white
+
+  &__inner 
+    display: flex 
+    flex-wrap: nowrap
+    aling-items: center
+    gap: 10px
+    padding-bottom: 10px
+
+  &__icon 
+    object-fit: contain
