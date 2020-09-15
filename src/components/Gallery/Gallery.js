@@ -1,5 +1,13 @@
 import $ from 'jquery';
 import 'slick-carousel';
+import 'lightgallery';
+import 'lg-thumbnail';
+import 'lg-share';
+import 'lg-zoom';
+import 'lg-hash';
+import 'lg-video';
+import 'lg-fullscreen';
+import 'lg-pager';
 
 const Gallery = {
   settings: {
@@ -10,6 +18,7 @@ const Gallery = {
     this.settings = $.extend(true, this.settings, args);
     if (this.settings.target.length) {
       this.catchDOM(this.settings);
+      this.initGallery();
       this.initSlick();
     }
   },
@@ -19,6 +28,12 @@ const Gallery = {
       root: target,
       slick: target.find(settings.slick)
     };
+  },
+  initGallery() {
+    this.$target.slick.lightGallery({
+      getCaptionFromTitleOrAlt: false,
+      thumbnail: true
+    });
   },
 
   initSlick() {

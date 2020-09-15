@@ -1,6 +1,7 @@
 import 'babel-polyfill';
 import $ from 'jquery';
 import 'slick-carousel';
+import 'lightgallery';
 
 import Banner from './components/Banner/Banner';
 import Header from './components/Header/Header';
