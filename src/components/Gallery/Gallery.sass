@@ -1,0 +1,31 @@
+.gallery  
+  display: block
+  width: 100%
+  margin: auto
+  padding-top: 35px
+  text-align: center
+  overflow: hidden
+
+  &__title
+    +title
+    width: 80%
+    margin: auto
+    padding-bottom: 60px
+
+  &__img
+    object-fit: contain
+    margin: auto
+
+  &__slick > .slick-dots 
+    bottom: auto
+    top: -50px
+
+  &__slick > .slick-prev
+    left: 10%
+    top: -100px
+    bottom: auto
+
+  &__slick > .slick-next
+    right: 10%
+    top: -100px
+    bottom: auto

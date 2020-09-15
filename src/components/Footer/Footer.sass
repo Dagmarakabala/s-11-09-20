@@ -9,16 +9,17 @@
     width: 80%
     margin: auto
 
+    +max($bp-xs)
+      width: 100%
+
   &__item
     width: 25%
     border-left: 1px solid $background-item
-    padding: 15px
+    padding: 20px 10px
 
-    &.-padding
-      padding: 15px 25px
-      
-    &:hover 
-      background-color: lighten($client, 25%)
+    &.-newsletter
+      padding: 20px 25px
+      background-color: $light-blue
 
     +max($bp-md)
       width: 50%
@@ -39,27 +40,20 @@
     font-size: 12px 
     text-decoration: none
 
-  &__item:hover > &__list > &__element > &__link
-    color: $white
-
-  &__item:hover > &__inner > &__text > &__link
-    color: $white
-
   &__text 
     font-size: 12px
     color: $grey-text
     
     &.-font-size-10
       font-size: 10px
-  &__item:hover > &__text
-    color: $white
 
-  &__item:hover > &__form > &__agree > &__text
-    color: $white
-  
-  &__item:hover > &__inner > &__text
-    color: $white
-  
+    .footer__item.-newsletter > & 
+      color: $white 
+
+    .footer__item.-newsletter > .footer__form > .footer__agree > & 
+      color: $white
+
+
   &__input 
     height: 36px
     width: 100%
@@ -85,16 +79,13 @@
     flex-wrap: wrap
     gap: 5px
 
-  &__item:hover > &__form > &__agree
-    color: $white
-
   &__textLink 
     display: inline-block
     color: $grey-text
     font-size: 10px
 
-  &__item:hover > &__form > &__agree > &__textLink
-    color: $white
+    .footer__item.-newsletter > .footer__form > .footer__agree > & 
+      color: $white
 
   &__inner 
     display: flex 

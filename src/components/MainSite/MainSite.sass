@@ -1,0 +1,51 @@
+.mainSite 
+  display: block
+  width: 80%
+  margin: auto
+  background-color: $white
+  owerflow: hidden
+
+  &__container 
+    border-bottom: 2px solid $background-item
+
+  &__title 
+    +title
+    padding: 25px 0px
+    text-align: center
+
+.slick-prev
+  transform: scale(0.5, 2)
+  top: 20%
+  &:before
+    content: "<"
+    font-size: 50px
+    color: $title-grey
+
+.slick-next
+  transform: scale(0.5, 2)
+  top: 20%
+
+  &:before
+    content: ">"
+    font-size: 50px
+    color: $title-grey
+
+.slick-dots 
+  bottom: auto
+  top: -10px
+
+  & li  
+    margin: 0px
+    width: 15px
+    height: 15px
+  
+  & li.slick-active button:before
+    color: $post
+
+  & li button:before
+    content: "■"
+    font-size: 15px
+    color: $client
+    opacity: 1
+    
+    

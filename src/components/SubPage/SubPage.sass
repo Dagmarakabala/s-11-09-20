@@ -1,0 +1,32 @@
+.subPage
+  display: block
+  width: 100%
+
+  &__container 
+    width: 100%
+    padding: 80px 10%
+    background-color: $post
+    color: $white
+
+    +max($bp-xs)
+      padding: 40px 10px
+
+    &.-second
+      width: 80%
+      margin: auto
+      padding: 80px 0px
+      background-color: $white
+      border-bottom: 2px solid $background-item
+      color: $title-grey
+
+      +max($bp-xs)
+        width: 100%
+        padding: 40px 10px
+
+  &__title
+    padding-bottom: 20px 
+    font-size: 24px
+
+  &__text
+    font-size: 16px
+    text-align: justify
