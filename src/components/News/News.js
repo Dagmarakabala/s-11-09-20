@@ -64,16 +64,16 @@ const News = {
     year.find('.news__container').removeClass('-displayNone');
   },
   selectDate(year, month) {
-    const currentYear = this.$target.root.find(`#${year}`);
-    const currentMonth = currentYear.find(`#${month}`);
-    const itemsInCurrentMonth = currentMonth.find(this.$target.item);
+    const selectYear = this.$target.root.find(`#${year}`);
+    const selectMonth = selectYear.find(`#${month}`);
+    const itemsInSelectMonth = selectMonth.find(this.$target.item);
     const allMonths = this.$target.root.find('.news__container');
-    const selectYear = currentYear.find('.news__container');
+    const monthsInSelectYear = selectYear.find('.news__container');
     const allItems = this.$target.item;
     allMonths.addClass('-displayNone');
-    selectYear.removeClass('-displayNone');
+    monthsInSelectYear.removeClass('-displayNone');
     allItems.addClass('-displayNone');
-    itemsInCurrentMonth.removeClass('-displayNone');
+    itemsInSelectMonth.removeClass('-displayNone');
   }
 };
 export default News;
