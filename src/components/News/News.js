@@ -14,6 +14,7 @@ const News = {
       this.bindEvents();
       this.addBackgroundColor();
       this.howManyItems();
+      this.selectDate('y2015', 'm10');
     }
   },
   catchDOM(settings) {
@@ -58,7 +59,21 @@ const News = {
     const allContainer = this.$target.root.find('.news__container');
     allContainer.addClass('-displayNone');
     const year = title.parent();
+    const allItems = this.$target.item;
+    allItems.addClass('-displayNone');
     year.find('.news__container').removeClass('-displayNone');
+  },
+  selectDate(year, month) {
+    const currentYear = this.$target.root.find(`#${year}`);
+    const currentMonth = currentYear.find(`#${month}`);
+    const itemsInCurrentMonth = currentMonth.find(this.$target.item);
+    const allMonths = this.$target.root.find('.news__container');
+    const selectYear = currentYear.find('.news__container');
+    const allItems = this.$target.item;
+    allMonths.addClass('-displayNone');
+    selectYear.removeClass('-displayNone');
+    allItems.addClass('-displayNone');
+    itemsInCurrentMonth.removeClass('-displayNone');
   }
 };
 export default News;

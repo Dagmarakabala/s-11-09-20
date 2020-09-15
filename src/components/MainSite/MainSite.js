@@ -13,7 +13,6 @@ const MainSite = {
     this.settings = $.extend(true, this.settings, args);
     if (this.settings.target.length) {
       this.catchDOM(this.settings);
-      this.removeDisplayNone();
       this.initSlick();
       this.addOfferItems();
     }
@@ -80,9 +79,6 @@ const MainSite = {
         }
       ]
     });
-  },
-  removeDisplayNone() {
-    this.$target.newsItem.removeClass('-displayNone');
   },
   addOfferItems() {
     const src = [
