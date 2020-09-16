@@ -16,10 +16,8 @@ const Header = {
   },
   toggleHeader() {
     const hamburger = this.headerSection.find('.header__toggle');
-    const form = this.menuSection.find('.contactForm');
     hamburger.toggleClass('expanded');
     this.menuSection.toggleClass('expanded');
-    form.removeClass('-formactive');
   }
 };
 export default Header;
