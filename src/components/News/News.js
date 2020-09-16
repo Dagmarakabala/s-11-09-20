@@ -14,7 +14,7 @@ const News = {
       this.bindEvents();
       this.addBackgroundColor();
       this.howManyItems();
-      this.selectDate('y2015', 'm10');
+      this.selectDate('y2014', 'm10');
     }
   },
   catchDOM(settings) {
