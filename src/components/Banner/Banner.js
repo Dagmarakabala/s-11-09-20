@@ -28,15 +28,14 @@ const Banner = {
       this.playVideo();
       this.playPauseVideo(this.$target.bannerSlick, 'play');
     });
-    this.$target.bannerSlick.on('afterChange', () => {
-      this.playVideo();
-      this.playPauseVideo(this.$target.bannerSlick, 'play');
-    });
     this.$target.bannerSlick.on('beforeChange', () => {
       this.playVideo();
       this.playPauseVideo(this.$target.bannerSlick, 'pause');
     });
-
+    this.$target.bannerSlick.on('afterChange', () => {
+      this.playVideo();
+      this.playPauseVideo(this.$target.bannerSlick, 'play');
+    });
     $.each(this.$target.bannerSlick.find('video'), (index, element) => {
       if (element.readyState === 4) {
         $(element)
@@ -53,12 +52,10 @@ const Banner = {
       }
     });
   },
-
   afterInit() {
     this.bindEvents();
     this.initSlick();
   },
-
   initSlick() {
     this.$target.bannerSlick.slick({
       adaptiveHeight: true,
@@ -72,14 +69,12 @@ const Banner = {
     });
     this.initialized = true;
   },
-
   playVideo() {
     const video = this.$target.bannerSlick.find('.slick-current video');
     if (video.length > 0) {
       video.get(0).play();
     }
   },
-
   refresh() {
     if (this.initialized) this.$target.bannerSlick.slick('setPosition');
   },
@@ -87,7 +82,6 @@ const Banner = {
     const currentSlide = slick.find('.slick-current');
     const slideType = currentSlide.attr('class').split(' ')[1];
     const player = currentSlide.find('iframe').get(0);
-    console.log(player);
     if (slideType === 'youtube') {
       switch (control) {
         case 'play':
@@ -102,7 +96,6 @@ const Banner = {
   },
   postMessageToPlayer(player, func) {
     if (player == null) return;
-
     player.contentWindow.postMessage(
       `{"event":"command","func":"${func}","args":""}`,
       '*'
@@ -116,7 +109,6 @@ const Banner = {
     let height = win.height();
     let playerHeight;
     let ratio = 16 / 9;
-
     $(iframes).each(function() {
       const current = $(this);
       if (width / ratio < height) {
